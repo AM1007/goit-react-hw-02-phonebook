@@ -7,6 +7,7 @@ import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 
 export class App extends Component {
+  
   state = {
     contacts: [
       { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -45,23 +46,8 @@ export class App extends Component {
   };
   render() {
     return (
-      <div
-        style={{
-          // height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101',
-          gap: 20,
-        }}
-      >
-        <h1
-          style={{
-            display: 'none',
-          }}
-        >
+      <div>
+        <h1>
           Phonebook
         </h1>
         <Section title="Phonebook">
