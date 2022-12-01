@@ -8,6 +8,7 @@ export const FilterLabel = styled.label`
   font-size: 20px;
   font-weight: 600;
 `;
+
 export const FilterInput = styled.input`
   width: 200px;
   height: 22px;

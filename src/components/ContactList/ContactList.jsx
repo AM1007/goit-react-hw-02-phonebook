@@ -6,7 +6,6 @@ import {
   ButtonDelete,
 } from './ContactList.styled';
 import { FcPhoneAndroid } from 'react-icons/fc';
-// import AddIcCallIcon from '@material-ui/icons/AddIcCall';
 
 export const ContactList = ({ contacts, deleteContact }) => (
   <ContactListUl>

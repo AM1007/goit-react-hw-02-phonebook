@@ -20,8 +20,10 @@ export class App extends Component {
 
   formSubmit = ({ name, number }) => {
     const contact = { id: nanoid(), name, number };
+    
     if (this.state.contacts.some(e => e.name === name)) {
-      return alert(`${name} is already in contacts!`);
+
+    return alert(`${name} is already in contacts!`);
     }
 
     this.setState(({ contacts }) => ({ contacts: [contact, ...contacts] }));
@@ -30,21 +32,27 @@ export class App extends Component {
   getFilteredContacts = () => {
     const { contacts, filter } = this.state;
     const filterContactsList = contacts.filter(contact => {
-      return contact.name.toLowerCase().includes(filter.toLowerCase());
+
+    return contact.name.toLowerCase().includes(filter.toLowerCase());
     });
+
     return filterContactsList;
   };
 
   filterList = evt => {
     const { name, value } = evt.target;
+
     this.setState({ [name]: value });
   };
+  
   deleteContact = contactId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== contactId),
     }));
   };
+
   render() {
+
     return (
       <div>
         <h1>
