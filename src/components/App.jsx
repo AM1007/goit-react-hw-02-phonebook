@@ -52,6 +52,7 @@ export class App extends Component {
   };
 
   render() {
+    const {filter} = this.state;
 
     return (
       <div>
@@ -62,7 +63,7 @@ export class App extends Component {
           <ContactForm onSubmit={this.formSubmit} />
         </Section>
         <Section title="Contacts">
-          <Filter value={this.state.filter} onChange={this.filterList} />
+          <Filter value={filter} onChange={this.filterList} />
           <ContactList
             contacts={this.getFilteredContacts()}
             deleteContact={this.deleteContact}
